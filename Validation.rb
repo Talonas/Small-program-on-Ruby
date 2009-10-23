@@ -1,6 +1,9 @@
 module Validation
   
   def Validation.is_empty(value)
+    if value.is_a? NilClass
+      return false
+    end
     if value.empty? 
       return false
     end
@@ -8,6 +11,9 @@ module Validation
   end
   
   def Validation.is_numeric(value)
+    if value.is_a? NilClass
+      return false
+    end
     if value.is_a?(Fixnum)
       return true
     end

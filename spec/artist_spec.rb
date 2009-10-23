@@ -18,4 +18,20 @@ describe Artist do
     new_artist.name.should == "Unknown Artist"
   end
   
+  it "should not allow  artist with no name" do
+    new_artist = Artist.new(1)
+    new_artist.before_save.should be_instance_of(FalseClass)
+  end
+  
+  it "should not save new artist without name" do
+    new_artist = Artist.new(1)
+    new_artist.save.should be_instance_of(FalseClass)
+  end
+  
+  it "should save a new artist" do
+    new_artist = Artist.new
+    new_artist.name = "Led Zeppelin"
+    new_artist.save.should be_instance_of(TrueClass)
+  end
+  
 end

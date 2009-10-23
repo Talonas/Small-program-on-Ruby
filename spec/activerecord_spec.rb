@@ -1,12 +1,14 @@
 require 'rubygems'
 require 'spec'
+
 require 'activerecord'
+require 'mainmethod'
 require 'artist'
 
 describe ActiveRecord do
  
   it "should build new object" do
-    new_artist = ActiveRecord.build_object("Artists", ["1", "Pink Floyd"])
+    new_artist = ActiveRecord.build_object("Artists", { "id" => "1", "name" => "Pink Floyd" })
     new_artist.should be_instance_of(Artist)
     new_artist.id.should == "1"
     new_artist.name.should == "Pink Floyd"
@@ -14,7 +16,7 @@ describe ActiveRecord do
   
   it "should find record by id" do
     lambda {
-      new_artist = ActiveRecord.find("Artist", 1)
+      new_artist = ActiveRecord.find("Artist", "1")
       new_artist.should be_instance_of(Artist)
       new_artist.id.should == "1"
       new_artist.name.should == "Pink Floyd"
@@ -43,5 +45,13 @@ describe ActiveRecord do
       artists.each { |artist| artist.should be_instance_of(Artist) }
     }.should_not raise_error(SQLite3::SQLException)
   end
-  
+=begin 
+  it "should save a new record into table" do
+    lambda {
+      new_artist = Artist.new
+      new_artist.name = "Queen"
+      new_artist.save().should be_instance_of(TrueClass)
+    }.should_not raise_error(SQLite3::SQLException)    
+  end
+=end 
 end
