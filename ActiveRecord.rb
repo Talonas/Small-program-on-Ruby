@@ -54,7 +54,7 @@ module ActiveRecord
         list += [build_object(class_name, row)]
       end
     end
-    
+
     return list
   end
   
