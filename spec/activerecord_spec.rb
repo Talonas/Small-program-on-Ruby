@@ -31,4 +31,9 @@ describe ActiveRecord do
     artists.each { |artist| artist.should be_instance_of(Artist) }
   end
   
+  it "should get all records from table with specify parameters" do
+    artists = ActiveRecord.find_all("Artist", { "name" => "Pink Floyd" })
+    artists.each { |artist| artist.should be_instance_of(Artist) }
+  end
+  
 end

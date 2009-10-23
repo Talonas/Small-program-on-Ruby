@@ -47,6 +47,13 @@ module ActiveRecord
       @db.execute("SELECT * FROM #{class_name}") { |row| list += [build_object(class_name, row)] }
     end
      
+    if query.is_a?(Hash)
+      query_data = []
+      query.each { |value| query_data += ["#{value[0]} = '#{value[1]}'"] }
+      @db.execute("SELECT * FROM #{class_name} WHERE #{query_data.join(' AND ')}") do |row|
+        list += [build_object(class_name, row)]
+      end
+    end
     
     return list
   end
