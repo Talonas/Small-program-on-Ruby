@@ -36,6 +36,19 @@ module ActiveRecord
       end
     end
     
+    return false
+  end
+  
+  def ActiveRecord.find_all(class_name, query=false)
+    class_name += "s"
+    list = []
+    
+    if !query
+      @db.execute("SELECT * FROM #{class_name}") { |row| list += [build_object(class_name, row)] }
+    end
+     
+    
+    return list
   end
   
 end

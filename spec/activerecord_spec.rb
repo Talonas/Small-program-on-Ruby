@@ -26,4 +26,9 @@ describe ActiveRecord do
     new_artist.name.should == "Pink Floyd"
   end
   
+  it "should get all records from table" do
+    artists = ActiveRecord.find_all("Artist")
+    artists.each { |artist| artist.should be_instance_of(Artist) }
+  end
+  
 end
