@@ -12,5 +12,11 @@ describe ActiveRecord do
     new_artist.name.should == "Pink Floyd"
   end
   
+  it "should find record by id" do
+    new_artist = ActiveRecord.find("Artist", 1)
+    new_artist.should be_instance_of(Artist)
+    new_artist.id.should == "1"
+    new_artist.name.should == "Pink Floyd"
+  end
   
 end

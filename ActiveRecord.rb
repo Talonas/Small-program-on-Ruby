@@ -19,4 +19,15 @@ module ActiveRecord
     return new_object
   end
   
+  def ActiveRecord.find(class_name, query)
+    class_name += "s"
+    
+    if query.is_a?(Fixnum)
+      @db.execute("SELECT * FROM #{class_name} WHERE id = '#{query}'") do |row|
+        return build_object(class_name, row)
+      end
+    end
+    
+  end
+  
 end
