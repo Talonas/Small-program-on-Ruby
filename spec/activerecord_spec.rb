@@ -19,4 +19,11 @@ describe ActiveRecord do
     new_artist.name.should == "Pink Floyd"
   end
   
+  it "should find record with one or more params" do
+    new_artist = ActiveRecord.find("Artist", { "name" => "Pink Floyd" })
+    new_artist.should be_instance_of(Artist)
+    new_artist.id.should == "1"
+    new_artist.name.should == "Pink Floyd"
+  end
+  
 end
