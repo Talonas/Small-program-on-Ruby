@@ -16,8 +16,12 @@ describe ActiveRecord do
     new_object.genre.should == "jazz"
   end
   
-  it "should find data base record with one parameter (ID)" do
+  it "should find database record with one parameter (ID)" do
     ActiveRecord.find("Album", 1).should be_instance_of(Album)
+  end
+  
+  it "should find database record with 'WHERE' query" do
+    ActiveRecord.find("Album", { "WHERE"=> {"name"=>"test"} }).should be_instance_of(Album)
   end
   
 end
