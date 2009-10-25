@@ -24,6 +24,55 @@ class UserInterface
     print "  Lytis: #{@user.gender}\n"
     print "  Adresas: #{@user.adress}\n"
     print "  El.pastas: #{@user.email}\n\n"
+    
+    print "  1 - Koreguoti duomenis\n"
+    print "  key: "
+    key = readline.chop
+    
+    if key == "1"
+      update_user_information
+    end
+    
+  end
+  
+  def update_user_information
+    system "clear"
+    print "INFORMACIJOS REDAGAVIMAS\n"
+    print "(neivesti laukai islaikys sena reiksme)\n"
+    print "  Vardas: "
+    name = readline.chop
+    if !name.empty?
+      @user.name = name
+    end
+    print "  Pavarde: "
+    surname = readline.chop
+    if !surname.empty?
+      @user.surname = surname
+    end
+    print "  Amzius: "
+    age = readline.chop
+    if !age.empty?
+      @user.age = age
+    end
+    print "  Lytis (vyr, mot): "
+    gender = readline.chop
+    if !gender.empty?
+      @user.gender = gender
+    end
+    print "  Adresas: "
+    adress = readline.chop
+    if !adress.empty?
+      @user.adress = adress
+    end
+    print "  El.pastas: "
+    email = readline.chop
+    if !email.empty?
+      @user.email = email
+    end
+    
+    if !@user.save
+      print "  Yra klaidingai suvestu duomenu!\n\n"
+    end
   end
   
   def shop
