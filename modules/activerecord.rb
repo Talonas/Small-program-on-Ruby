@@ -53,4 +53,23 @@ module ActiveRecord
     
   end
   
+  def ActiveRecord.find_all(class_name, query=false)
+    class_name += "s"
+    object_list = []
+      
+    if !query
+      @db.execute("SELECT * FROM #{class_name}") { |row| object_list += [build_object(class_name, row)] }
+      return !object_list.empty? ? object_list : false
+    end
+    
+    if query.is_a? Hash
+      sql_sentence = ActiveRecord.generate_sql_sentence query
+      @db.execute("SELECT * FROM #{class_name} #{sql_sentence}") { |row| object_list += [build_object(class_name, row)] }
+      return !object_list.empty? ? object_list : false
+    end
+    
+    return false
+    
+  end
+  
 end

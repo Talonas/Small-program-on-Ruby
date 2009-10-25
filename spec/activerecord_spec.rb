@@ -24,4 +24,14 @@ describe ActiveRecord do
     ActiveRecord.find("Album", { "WHERE"=> {"name"=>"test"} }).should be_instance_of(Album)
   end
   
+  it "should find all table records" do
+    object_list = ActiveRecord.find_all("Album")
+    object_list.each { |object| object.should be_instance_of(Album) }
+  end
+  
+  it "should find all table records with query" do
+    object_list = ActiveRecord.find_all("Album", { "WHERE" => {"name"=>"test"} })
+    object_list.each { |object| object.should be_instance_of(Album) }
+  end
+  
 end
