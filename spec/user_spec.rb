@@ -39,6 +39,11 @@ describe User do
       user = User.new
       user.before_save.should be_instance_of(FalseClass)
     end
+    it "should success if all user's attributes are correct" do
+      user = User.new(1, "name", "surname", 11, "gender", "adress", "email") do
+        user.before_save.should be_instance_of(TrueClass)
+      end
+    end
   end
   
 end
