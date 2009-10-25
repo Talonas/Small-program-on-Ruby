@@ -71,5 +71,33 @@ module ActiveRecord
     return false
     
   end
+
+  def ActiveRecord.save(class_name, query)
+    class_name += "s"
+    rows = []
+    values = []
+      
+    query.each do |value|
+      rows += [value[0]]
+      values += ["'#{value[1]}'"]
+    end
+    
+    @db.execute("INSERT INTO #{class_name} (#{rows.join(', ')}) VALUES (#{values.join(', ')})")
+
+  end
   
+  def ActiveRecord.update(class_name, id, query)
+    class_name += "s"
+    
+    update_sentences = []
+    query.each { |hash| update_sentences += ["#{hash[0]} = '#{hash[1]}'"] }
+    
+    @db.execute("UPDATE #{class_name} SET #{update_sentences.join(', ')} WHERE id = #{id}")
+      
+  end
+  
+  def ActiveRecord.delete(class_name, query)
+    class_name += "s"
+  end
+    
 end
