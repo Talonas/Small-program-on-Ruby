@@ -86,18 +86,22 @@ module ActiveRecord
 
   end
   
-  def ActiveRecord.update(class_name, id, query)
+  def ActiveRecord.update(class_name, where, query)
     class_name += "s"
     
     update_sentences = []
     query.each { |hash| update_sentences += ["#{hash[0]} = '#{hash[1]}'"] }
     
-    @db.execute("UPDATE #{class_name} SET #{update_sentences.join(', ')} WHERE id = #{id}")
+    if where.is_a? Array
+      @db.execute("UPDATE #{class_name} SET #{update_sentences.join(', ')} WHERE #{where[0]} = #{where[1]}")
+    else
+      @db.execute("UPDATE #{class_name} SET #{update_sentences.join(', ')} WHERE id = #{where}")
+    end
       
   end
-  
+=begin
   def ActiveRecord.delete(class_name, query)
     class_name += "s"
   end
-    
+=end 
 end
