@@ -21,7 +21,7 @@ describe ActiveRecord do
   end
   
   it "should find database record with 'WHERE' query" do
-    ActiveRecord.find("Album", { "WHERE"=> {"name"=>"test"} }).should be_instance_of(Album)
+    ActiveRecord.find("Album", { "WHERE"=> {"name"=>"Led Zeppelin"} }).should be_instance_of(Album)
   end
   
   it "should find all table records" do
@@ -30,8 +30,13 @@ describe ActiveRecord do
   end
   
   it "should find all table records with query" do
-    object_list = ActiveRecord.find_all("Album", { "WHERE" => {"name"=>"test"} })
+    object_list = ActiveRecord.find_all("Album", { "WHERE" => {"genre"=>"hard rock"} })
     object_list.each { |object| object.should be_instance_of(Album) }
+  end
+  
+  it "should update record with ID 1" do
+    hash = {"name"=>"The Piper at the Gates of Dawn", "year"=>1967, "genre"=>"psychedelic rock"}
+    ActiveRecord.update("Album", 1, hash)
   end
   
 end
