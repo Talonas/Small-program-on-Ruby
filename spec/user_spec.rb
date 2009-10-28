@@ -37,11 +37,11 @@ describe User do
   describe User, "before_save" do
     it "should fail if all or one user's attributes are incorrect" do
       user = User.new
-      user.before_save.should be_instance_of(FalseClass)
+      user.before_save.should be_false
     end
     it "should success if all user's attributes are correct" do
       user = User.new(1, "name", "surname", 11, "gender", "adress", "email") do
-        user.before_save.should be_instance_of(TrueClass)
+        user.before_save.should be_true
       end
     end
   end
