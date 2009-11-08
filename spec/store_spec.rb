@@ -36,11 +36,21 @@ describe Store do
     }.should change(store, :amount).by(-1)
   end
   
+  it "should not allow to sell album if its amount is less than 1" do
+    store = Store.new(1, 0, 20, 10)
+    store.sell.should be_false
+  end
+  
   it "should add add more albums to store" do
     store = Store.new(1, 0, 20, 10)
     lambda {
       store.add_amount 10
     }.should change(store, :amount).by(10)
+  end
+  
+  it "should not allow to add more albums to the store if value of amount is not numeric" do
+    store = Store.new(1, 0, 20, 10)
+    store.add_amount("amount").should be_false
   end
   
   it "should change price of album" do
