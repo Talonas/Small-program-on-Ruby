@@ -10,4 +10,6 @@ class UserHistory < MainMethod
     @price = price
   end
   
+  
+  
 end

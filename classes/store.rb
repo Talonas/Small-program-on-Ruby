@@ -23,8 +23,12 @@ class Store < MainMethod
   end
   
   def set_new_price new_price
-    @price = new_price
-    ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+    if Validation.is_numeric(new_price)
+      @price = new_price
+      ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+      return true
+    end
+    false
   end
   
   def before_save
