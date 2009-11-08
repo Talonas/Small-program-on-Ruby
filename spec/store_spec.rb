@@ -45,9 +45,14 @@ describe Store do
   
   it "should change price of album" do
     store = Store.new(1, 1, 0, 10)
-  lambda {
-    store.set_new_price 20
-  }.should change(store, :price).from(0).to(20)
+    lambda {
+      store.set_new_price 20
+    }.should change(store, :price).from(0).to(20)
+  end
+  
+  it "should not change price of album if value is not numeric" do
+    store = Store.new(1, 1, 1, 10)
+    store.set_new_price("price").should be_false
   end
   
   describe Store, "before_save" do
@@ -62,6 +67,10 @@ describe Store do
     it "should fail is self price is not numeric" do
       store = Store.new(1, 2, 3, "string")
       store.before_save.should be_false
+    end
+    it "should success if amount, price and self price are correct" do
+      store = Store.new(1, 10, 20, 20)
+      store.before_save.should be_true
     end
   end
   
