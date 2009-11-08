@@ -43,57 +43,42 @@ class UserInterface
     print "(neivesti laukai islaikys sena reiksme)\n"
     print "  Vardas: "
     name = readline.chop
-    if !name.empty?
-      @user.name = name
-    end
     print "  Pavarde: "
     surname = readline.chop
-    if !surname.empty?
-      @user.surname = surname
-    end
     print "  Amzius: "
     age = readline.chop
-    if !age.empty?
-      @user.age = age
-    end
     print "  Lytis (vyr, mot): "
     gender = readline.chop
-    if !gender.empty?
-      @user.gender = gender
-    end
     print "  Adresas: "
     adress = readline.chop
-    if !adress.empty?
-      @user.adress = adress
-    end
     print "  El.pastas: "
     email = readline.chop
-    if !email.empty?
-      @user.email = email
-    end
-    
-    if !@user.save
+    if !user.update(name, surname, age, gender, adress, email)
       print "  Yra klaidingai suvestu duomenu!\n"
-      readline
+      readline      
     else
       print "  Jusu duomenys sekmingai issaugoti!\n"
-      readline
+      readline      
     end
   end
   
   def show_user_history
     system "clear"
     print "PIRKINIU ISTORIJA\n"
+    
+    print "  Isleista pinigu: #{@user.how_mutch_money_spended}Lt\n"
+    items_count = ActiveRecord.count("UserHistory", {"WHERE" => {"user_id" => @user.id}})
+    print "  Pirkta pirkiniu: #{items_count}\n\n"
+    
     histories = ActiveRecord.find_all("UserHistory", {"WHERE" => {"user_id"=>@user.id}})
     if histories
+      nr = 1
       histories.each do |history|
-        album = history.info["album"]
+        album  = history.info["album"]
         artist = history.info["artist"]
-        print "  #{artist.name} - '#{album.name}' #{album.year}\n"
+        print "  #{nr}. #{artist.name} - '#{album.name}' #{album.year}\n"
+        nr += 1
       end
-      readline
-    else
-      print "  Jus dar nieko nepirkote\n"
       readline
     end
   end
@@ -125,9 +110,6 @@ class UserInterface
     artist = ActiveRecord.find("Artist", key)
     if artist
       print_artist_albums artist
-    else
-      print "  Tokio atlikejo nera!\n"
-      readline
     end
   end
   

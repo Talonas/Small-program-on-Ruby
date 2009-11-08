@@ -1,6 +1,6 @@
 module Validation
   
-  def Validation.is_empty(value)
+  def Validation.not_empty(value)
     if value.is_a? NilClass
       return false
     end

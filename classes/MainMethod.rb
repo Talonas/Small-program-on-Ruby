@@ -14,7 +14,11 @@ class MainMethod
       hash[attribute.to_s.tr_s("@", "")] = self.instance_variable_get(attribute)
     end
     
-    return hash
+    hash
+  end
+  
+  def before_save
+    true
   end
  
   def save

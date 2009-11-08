@@ -100,8 +100,13 @@ module ActiveRecord
       
   end
   
-  def ActiveRecord.count class_name
-    results = ActiveRecord.find_all(class_name)
+  def ActiveRecord.count class_name, query=false
+    if !query
+      results = ActiveRecord.find_all(class_name)    
+    end
+    if query
+      results = ActiveRecord.find_all(class_name, query)
+    end
     return results.size
   end
   
