@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'spec'
 require 'classes/album'
+require 'classes/store'
 require 'modules/activerecord'
 
 describe Album do
@@ -15,6 +16,11 @@ describe Album do
     album.artist_id.should == 2
     album.name.should == "name"
     album.genre.should == "genre"
+  end
+  
+  it "should sell album for user" do
+    album = ActiveRecord.find("Album", 1)
+    album.sell 1
   end
   
   it "should not allow to sell album if it's amount is 0" do
