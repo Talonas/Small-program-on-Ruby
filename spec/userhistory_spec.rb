@@ -1,7 +1,9 @@
 require 'rubygems'
 require 'spec'
-
 require 'classes/userhistory'
+require 'classes/album'
+require 'classes/artist'
+require 'modules/activerecord'
 
 describe UserHistory do
   
@@ -25,6 +27,12 @@ describe UserHistory do
     history.user_id = 1
     history.album_id = 2
     history.price = 3
+  end
+  
+  it "should get artist and album information" do
+    history = ActiveRecord.find("UserHistory", {"WHERE" => {"user_id" => 1}})
+    history.info["album"].should be_instance_of(Album)
+    history.info["artist"].should be_instance_of(Artist)
   end
   
 end
