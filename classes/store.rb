@@ -13,7 +13,7 @@ class Store < MainMethod
   end
   
   def sell
-    if @amount > 0
+    if Integer(@amount) > 0
       @amount = Integer(@amount) -1
       ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
         return true

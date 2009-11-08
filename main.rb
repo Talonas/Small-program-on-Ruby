@@ -87,8 +87,8 @@ class UserInterface
     histories = ActiveRecord.find_all("UserHistory", {"WHERE" => {"user_id"=>@user.id}})
     if histories
       histories.each do |history|
-        album = ActiveRecord.find("Album", history.album_id)
-        artist = ActiveRecord.find("Artist", album.artist_id)
+        album = history.info["album"]
+        artist = history.info["artist"]
         print "  #{artist.name} - '#{album.name}' #{album.year}\n"
       end
       readline

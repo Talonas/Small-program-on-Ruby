@@ -1,4 +1,5 @@
 require 'classes/mainmethod'
+require 'modules/activerecord'
 
 class UserHistory < MainMethod
   
@@ -10,6 +11,10 @@ class UserHistory < MainMethod
     @price = price
   end
   
-  
+  def info
+    album = ActiveRecord.find("Album", @album_id)
+    artist = ActiveRecord.find("Artist", album.artist_id)
+    return {"album" => album, "artist" => artist}
+  end
   
 end

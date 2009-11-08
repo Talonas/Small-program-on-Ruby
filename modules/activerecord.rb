@@ -99,6 +99,12 @@ module ActiveRecord
     end
       
   end
+  
+  def ActiveRecord.count class_name
+    results = ActiveRecord.find_all(class_name)
+    return results.size
+  end
+  
 =begin
   def ActiveRecord.delete(class_name, query)
     class_name += "s"
