@@ -107,7 +107,11 @@ module ActiveRecord
     if query
       results = ActiveRecord.find_all(class_name, query)
     end
-    return results.size
+    if results  != false
+      return results.size
+    else
+      return 0
+    end
   end
   
 =begin

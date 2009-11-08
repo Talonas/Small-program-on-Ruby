@@ -24,7 +24,7 @@ class User < MainMethod
     end
     return money_spend
   end
-  
+
   def before_save
     if !Validation.not_empty(@name) || !Validation.not_empty(@surname) || !Validation.is_numeric(@age) || 
        !Validation.not_empty(@gender) || !Validation.not_empty(@adress) || !Validation.not_empty(@email)

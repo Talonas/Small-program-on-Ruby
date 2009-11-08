@@ -121,6 +121,25 @@ class AdminInterface
     store_menu
   end
   
+  def most_sold_albums
+    system "clear"
+    print "LABIAUSIAI PERKAMI ALBUMAI\n"
+    albums_hash = {}
+      
+    albums = ActiveRecord.find_all("Album")
+    
+    albums.each do |album|
+      albums_hash[album.name] = ActiveRecord.count("UserHistory", {"WHERE" => {"album_id" => album.id}})
+    end
+    
+    albums_hash.sort {|a,b| a[1]<=>b[1]}.reverse.each do |album|
+      if album[1] > 0
+        print "  #{album[0]}: #{album[1]}\n"
+      end
+    end
+    readline
+  end
+  
   def store_menu
     system "clear"
     print "SANDELIS\n"
@@ -129,6 +148,7 @@ class AdminInterface
     print "  3 - Pirkti naujus albumus (feature)\n"
     print "  4 - Keisti albumo kaina\n"
     print "  5 - Isparduoti albumai\n"
+    print "  6 - Labiausiai perkami albumai\n"
     print "\n  key: "
     key = readline.chop
     if key == "1"
@@ -147,6 +167,9 @@ class AdminInterface
     end
     if key == "5"
       soldout_albums
+    end
+    if key == "6"
+      most_sold_albums
     end
   end
   
