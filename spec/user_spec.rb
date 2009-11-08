@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'spec'
 require 'classes/user'
+require 'modules/activerecord'
 
 describe User do
   
@@ -34,12 +35,17 @@ describe User do
     user.email = "emailas"
   end
   
+  it "should update user's information" do
+    user = ActiveRecord.find("User", 1)
+    user.update("Paulius", "Pilkauskas", "", "", "", "")
+  end
+  
   describe User, "before_save" do
-    it "should fail if all or one user's attributes are incorrect" do
+    it "should not allow register new client if he filled form incorectly" do
       user = User.new
       user.before_save.should be_false
     end
-    it "should success if all user's attributes are correct" do
+    it "should allow to create new user if he filled form correctly" do
       user = User.new(1, "name", "surname", 11, "gender", "adress", "email") do
         user.before_save.should be_true
       end
