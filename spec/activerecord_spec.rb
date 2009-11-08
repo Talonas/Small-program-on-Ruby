@@ -20,8 +20,16 @@ describe ActiveRecord do
     ActiveRecord.find("Album", 1).should be_instance_of(Album)
   end
   
+  it "should fail if database record with one parameter (ID) does not exist" do
+    ActiveRecord.find("Album", 1343).should be_false
+  end
+  
   it "should find database record with 'WHERE' query" do
     ActiveRecord.find("Album", { "WHERE"=> {"name"=>"Led Zeppelin"} }).should be_instance_of(Album)
+  end
+  
+  it "should fail if database record with 'WHERE' query does not exist" do
+    ActiveRecord.find("Album", { "WHERE"=> {"name"=>"Zentai"} }).should be_false
   end
   
   it "should find all table records" do
@@ -32,6 +40,11 @@ describe ActiveRecord do
   it "should find all table records with query" do
     object_list = ActiveRecord.find_all("Album", { "WHERE" => {"genre"=>"hard rock"} })
     object_list.each { |object| object.should be_instance_of(Album) }
+  end
+  
+  it "should fail to find all table record if query is incorrect" do
+    object_list = ActiveRecord.find_all("Album", { "WHERE" => {"genre"=>"llalalala"} })
+    object_list.should be_false
   end
   
   it "should update record with ID 1" do
