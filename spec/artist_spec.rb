@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'spec'
 require 'classes/artist'
+require 'classes/album'
 
 describe Artist do
   
@@ -22,6 +23,13 @@ describe Artist do
     artist = Artist.new
     artist.id = 10
     artist.name = "test"
+  end
+  
+  it "should get all artist's albums" do
+    artist = ActiveRecord.find("Artist", 1)
+    artist.get_albums.each do |album|
+      album.should be_instance_of(Album)
+    end
   end
   
 end
