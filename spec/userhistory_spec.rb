@@ -20,7 +20,7 @@ describe UserHistory do
     history.price.should == 3
   end
   
-  it "should write new attr values" do
+  it "should add new record (album_id and price) to user's history" do
     history = UserHistory.new
     history.user_id = 1
     history.album_id = 2

@@ -31,29 +31,35 @@ describe Store do
   
   it "should sell album" do
     store = Store.new(1, 12, 20, 10)
-    store.sell
+    lambda {
+      store.sell
+    }.should change(store, :amount).by(-1)
   end
   
   it "should add add more albums to store" do
     store = Store.new(1, 0, 20, 10)
-    store.add_amount 10
+    lambda {
+      store.add_amount 10
+    }.should change(store, :amount).by(10)
   end
   
   it "should change price of album" do
     store = Store.new(1, 1, 0, 10)
+  lambda {
     store.set_new_price 20
+  }.should change(store, :price).from(0).to(20)
   end
   
   describe Store, "before_save" do
-    it "should fail if amount is incorrect" do
+    it "should fail if amount is not numeric" do
       store = Store.new(1, "string", 3, 4)
       store.before_save.should be_false
     end
-    it "should fail if price is incorrect" do
+    it "should fail if price is not numeric" do
       store = Store.new(1, 2, "string", 4)
       store.before_save.should be_false
     end
-    it "should fail is self_price is incorrect" do
+    it "should fail is self price is not numeric" do
       store = Store.new(1, 2, 3, "string")
       store.before_save.should be_false
     end

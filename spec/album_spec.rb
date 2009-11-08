@@ -1,15 +1,12 @@
 require 'rubygems'
 require 'spec'
 require 'classes/album'
+require 'modules/activerecord'
 
 describe Album do
   
   it "should create new empty album" do
     Album.new.should be_instance_of(Album)
-  end
-  
-  it "should create new not empty album" do
-    Album.new(1, 2, "name", 2009, "jazz").should be_instance_of(Album)
   end
   
   it "should have id, artist_id, name, year and genre" do
@@ -20,13 +17,10 @@ describe Album do
     album.genre.should == "genre"
   end
   
-  it "should rewrite attributes" do
-    album = Album.new(1, 2, "name", 2009, "genre")
-    album.id = 10
-    album.artist_id = 21
-    album.name = "test"
-    album.year = 990
-    album.genre = "rewrite" 
+  it "should not allow to sell album if it's amount is 0" do
+    album = Album.new(999, 1, "album_name", 2009, "jazz")
+    album.sell(1).should be_false
   end
   
+
 end

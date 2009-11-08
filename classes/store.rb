@@ -14,7 +14,6 @@ class Store < MainMethod
   
   def sell
     @amount = Integer(@amount) -1
-    #@amount -= 1
     ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
   end
   
@@ -29,13 +28,7 @@ class Store < MainMethod
   end
   
   def before_save
-    if !Validation.is_numeric @amount
-      return false
-    end
-    if !Validation.is_numeric @price
-      return false
-    end
-    if !Validation.is_numeric @self_price
+    if !Validation.is_numeric(@amount) || !Validation.is_numeric(@price) || !Validation.is_numeric(@self_price)
       return false
     end
     true

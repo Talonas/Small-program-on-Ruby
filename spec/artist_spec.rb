@@ -4,11 +4,11 @@ require 'classes/artist'
 
 describe Artist do
   
-  it "should create new empty artist" do
+  it "should create a new empty artist" do
     Artist.new.should be_instance_of(Artist)
   end
   
-  it "should create new artist with params" do
+  it "should create a new artist with id and name" do
     Artist.new(1, "artist").should be_instance_of(Artist)
   end
   
