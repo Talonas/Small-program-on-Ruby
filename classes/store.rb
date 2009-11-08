@@ -13,13 +13,21 @@ class Store < MainMethod
   end
   
   def sell
-    @amount = Integer(@amount) -1
-    ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+    if @amount > 0
+      @amount = Integer(@amount) -1
+      ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+        return true
+    end
+    false
   end
   
   def add_amount amount
-    @amount = Integer(@amount) + Integer(amount)
-    ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+    if Validation.is_numeric amount
+      @amount = Integer(@amount) + Integer(amount)
+      ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+      return true
+    end
+    false
   end
   
   def set_new_price new_price
