@@ -52,4 +52,8 @@ describe ActiveRecord do
     ActiveRecord.update("Album", 1, hash)
   end
   
+  it "should calculate table's records" do
+    ActiveRecord.count("Album").should be_kind_of(Numeric)
+  end
+  
 end
