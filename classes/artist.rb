@@ -12,9 +12,9 @@ class Artist
   def get_albums
     ActiveRecord.find_all("Album", {"WHERE" => {"artist_id" => @id}})
   end
-  
+=begin
   def print_info
     print "  #{@id}. #{@name}\n"
   end
-  
+=end
 end

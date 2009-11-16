@@ -27,6 +27,5 @@ describe Album do
     album = Album.new(999, 1, "album_name", 2009, "jazz")
     album.sell(1).should be_false
   end
-  
 
 end

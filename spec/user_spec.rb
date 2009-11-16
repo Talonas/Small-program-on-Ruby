@@ -38,29 +38,32 @@ describe User do
   
   it "should update user's information" do
     user = ActiveRecord.find("User", 1)
-    user.update("Paulius", "Pilkauskas", "", "", "", "")
+    user.update("Paulius", "Pilkauskas", "22", "vyr", "Vilnius", "test").should be_true
   end
-  
+
   it "should count how much money did user spend" do
     user = ActiveRecord.find("User", 1)
     user.how_mutch_money_spended.should be_kind_of(Fixnum)
   end
   
-  it "should return zero if user did not buy anything yet" do
+  it "should show zero in user history how much money spend if user did not buy anything yet" do
     user = User.new(100, "userName", "LastName", 34, "vyr", "adress", "email")
     user.how_mutch_money_spended.should equal(0)
   end
-  
-  describe User, "before_save" do
-    it "should not allow register or update user if he filled form incorectly" do
-      user = User.new
-      user.before_save.should be_false
-    end
-    it "should allow to create or update user if he filled form correctly" do
-      user = User.new(1, "name", "surname", 11, "gender", "adress", "email") do
-        user.before_save.should be_true
-      end
-    end
+
+  it "should not allow register new user if he didn't filled fields" do
+    user = User.new
+    user.before_save.should be_false
+  end
+
+  it "should not allow register new user if age is noti numeric" do
+    user = User.new("Username", "Userlastname", "AGE", "gender", "adress", "email")
+    user.save.should be_false
+  end
+
+  it "should not allow update user's information if age is not a number" do
+    user = ActiveRecord.find("User", 1)
+    user.update("", "", "age", "", "", "").should be_false
   end
   
 end

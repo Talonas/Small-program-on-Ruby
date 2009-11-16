@@ -103,7 +103,7 @@ class UserInterface
     system "clear"
     print "ATLIKEJAI:\n"
     artists = ActiveRecord.find_all("Artist")
-    artists.each { |artist| artist.print_info }
+    artists.each { |artist| print "  #{artist.id}. #{artist.name}\n" }
     print "\n  Iveskite atlikejo ID\n"
     print "  key: "
     key = readline.chop
@@ -120,7 +120,8 @@ class UserInterface
     albums.each do |album|
       store = ActiveRecord.find("Store", {"WHERE" => {"album_id"=>album.id}})
       if store
-        album.print_info store.price, store.amount
+        #album.print_info store.price, store.amount
+        print "  #{album.id}. #{album.name}, #{album.year} : Kaina #{price}Lt, liko #{amount}vnt.\n"
       end
     end
     print "\n  Iveskite albumo ID, kuri pirksite: "

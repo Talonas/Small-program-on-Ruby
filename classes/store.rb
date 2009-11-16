@@ -6,9 +6,9 @@ class Store < MainMethod
   attr_accessor :album_id, :amount, :price, :self_price
   
   def initialize(album_id=nil, amount=nil, price=nil, self_price=nil)
-    @album_id = album_id
-    @amount = amount
-    @price = price
+    @album_id   = album_id
+    @amount     = amount
+    @price      = price
     @self_price = self_price
   end
   
@@ -23,18 +23,26 @@ class Store < MainMethod
   
   def add_amount amount
     if Validation.is_numeric amount
-      @amount = Integer(@amount) + Integer(amount)
-      ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
-      return true
+      if Integer(amount) > 0
+        @amount = Integer(@amount) + Integer(amount)
+        ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+        return true
+      else
+        return false
+      end
     end
     false
   end
   
   def set_new_price new_price
     if Validation.is_numeric(new_price)
-      @price = new_price
-      ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
-      return true
+      if Integer(new_price) > 0
+        @price = new_price
+        ActiveRecord.update(self.class.to_s, ["album_id", @album_id], prepare_for_save)
+        return true
+      else
+        return false
+      end
     end
     false
   end

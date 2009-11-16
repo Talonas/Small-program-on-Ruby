@@ -14,6 +14,9 @@ describe Validation do
   end
   
   describe Validation, "method is_numeric" do
+    it "should fail if value is Nill" do
+      Validation.is_numeric(nil).should be_false
+    end
     it "should success if given value is numeric" do
       Validation.is_numeric(12).should be_true
       Validation.is_numeric("12").should be_true

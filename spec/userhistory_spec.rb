@@ -5,14 +5,20 @@ require 'classes/album'
 require 'classes/artist'
 require 'modules/activerecord'
 
+Spec::Matchers.define :belong do |expected|
+  match do |actual|
+    actual.should be_instance_of(expected)
+  end
+end
+
 describe UserHistory do
   
   it "should create empty userHistory class" do
-    UserHistory.new.should be_instance_of(UserHistory)
+    UserHistory.new.should belong(UserHistory)
   end
   
   it "should create UserHistory object with user_id, album_id and price" do
-    UserHistory.new(1, 1, 200).should be_instance_of(UserHistory)
+    UserHistory.new(1, 1, 200).should belong(UserHistory)
   end
   
   it "should have user_id, album_id and price" do
@@ -31,8 +37,8 @@ describe UserHistory do
   
   it "should get artist and album information" do
     history = ActiveRecord.find("UserHistory", {"WHERE" => {"user_id" => 1}})
-    history.info["album"].should be_instance_of(Album)
-    history.info["artist"].should be_instance_of(Artist)
+    history.info["album"].should belong(Album)
+    history.info["artist"].should belong(Artist)
   end
   
 end
