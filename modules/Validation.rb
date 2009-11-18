@@ -7,7 +7,7 @@ module Validation
     if value.empty? 
       return false
     end
-    return true
+    true
   end
   
   def Validation.is_numeric(value)
@@ -20,7 +20,6 @@ module Validation
     if value.is_a?(String)
       return /^[\d]+(\.[\d]+){0,1}$/ === value
     end
-    false
   end
   
 end

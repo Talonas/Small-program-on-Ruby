@@ -11,7 +11,7 @@ class Store < MainMethod
     @price      = price
     @self_price = self_price
   end
-  
+
   def sell
     if Integer(@amount) > 0
       @amount = Integer(@amount) -1
@@ -33,7 +33,7 @@ class Store < MainMethod
     end
     false
   end
-  
+
   def set_new_price new_price
     if Validation.is_numeric(new_price)
       if Integer(new_price) > 0
@@ -53,5 +53,5 @@ class Store < MainMethod
     end
     true
   end
-  
+
 end

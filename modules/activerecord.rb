@@ -36,6 +36,9 @@ module ActiveRecord
     
     return sql_sentence
   end
+=begin
+album = ActiveRecord.find("Albun", {  })
+=end
   
   def ActiveRecord.find(class_name, query)
     class_name += "s"

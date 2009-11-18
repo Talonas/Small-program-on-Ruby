@@ -17,7 +17,7 @@ class User < MainMethod
   end
   
   def how_mutch_money_spended
-    money_spend = 0
+    moneyend_spend = 0
     histories = ActiveRecord.find_all("UserHistory", {"WHERE" => {"user_id" => @id}})
     if histories
       histories.each { |history| money_spend += Integer(history.price) }

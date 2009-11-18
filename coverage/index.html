@@ -1,0 +1,1818 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Small Program On Ruby C0 Coverage Information - RCov</title>
+    <link href="screen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="print.css" media="print" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="rcov.js"></script>
+  </head>
+  <body>
+    <h1>Small Program On Ruby C0 Coverage Information - RCov</h1>
+    
+
+    <noscript><style type="text/css">.if_js { display:none; }</style></noscript>
+
+    <div class="filters if_js">
+      <fieldset>
+        <label>File Filter:</label>
+        <select id="file_filter" class="filter">
+          <option value="all_files">Show All</option>
+          <option value="">/</option><option value=".gem">.gem/</option><option value="1.8">1.8/</option><option value="Gems">Gems/</option><option value="Library">Library/</option><option value="Ruby">Ruby/</option><option value="Users">Users/</option><option value="adapters">adapters/</option><option value="bin">bin/</option><option value="classes">classes/</option><option value="dsl">dsl/</option><option value="example">example/</option><option value="expectations">expectations/</option><option value="extensions">extensions/</option><option value="formatter">formatter/</option><option value="gems">gems/</option><option value="lib">lib/</option><option value="matchers">matchers/</option><option value="mock_frameworks">mock_frameworks/</option><option value="mocks">mocks/</option><option value="modules">modules/</option><option value="rcov">rcov/</option><option value="rcov-0.9.6">rcov-0.9.6/</option><option value="rspec-1.2.9">rspec-1.2.9/</option><option value="ruby">ruby/</option><option value="runner">runner/</option><option value="spec">spec/</option><option value="talonas">talonas/</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label>Code Coverage Threshold:</label>
+        <select id="coverage_filter" class="filter">
+          <option value="all_coverage">Show All</option>
+          <option value="10">&lt; 10% Coverage</option><option value="20">&lt; 20% Coverage</option><option value="30">&lt; 30% Coverage</option><option value="40">&lt; 40% Coverage</option><option value="50">&lt; 50% Coverage</option><option value="60">&lt; 60% Coverage</option><option value="70">&lt; 70% Coverage</option><option value="80">&lt; 80% Coverage</option><option value="90">&lt; 90% Coverage</option><option value="100">&lt; 100% Coverage</option>
+          <option value="110">= 100% Coverage</option>
+        </select>
+      </fieldset>
+    </div>
+    
+    <div class="report_table_wrapper">
+      <table class='report' id='report_table'>
+        <thead>
+          <tr>
+            <th class="left_align">Name</th>
+            <th class="right_align">Total Lines</th>
+            <th class="right_align">Lines of Code</th>
+            <th class="left_align">Total Coverage</th>
+            <th class="left_align">Code Coverage</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td class="left_align">TOTAL</td>
+            <td class='right_align'><tt>7698</tt></td>
+            <td class='right_align'><tt>5109</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>66.69%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:67px"></div>
+            <div class="uncovered" style="width:33px"></div>
+          </div></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class='coverage_total'>54.36%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:54px"></div>
+            <div class="uncovered" style="width:46px"></div>
+          </div></td>
+          </tr>
+        </tfoot>
+        <tbody>
+          
+            <tr class="all_files all_coverage 10 20 30 40 50 60 70 80 90 100  Library Ruby Gems 1.8 gems rcov-0.9.6 lib rcov even">
+              <td class="left_align"><a href="-Library-Ruby-Gems-1_8-gems-rcov-0_9_6-lib-rcov-code_coverage_analyzer_rb.html">/Library/Ruby/Gems/1.8/gems/rcov-0.9.6/lib/rcov/code_coverage_analyzer.rb</a></td>
+              <td class='right_align'><tt>271</tt></td>
+              <td class='right_align'><tt>156</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>7.01%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:7px"></div>
+            <div class="uncovered" style="width:93px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>5.13%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:5px"></div>
+            <div class="uncovered" style="width:95px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Library Ruby Gems 1.8 gems rcov-0.9.6 lib rcov odd">
+              <td class="left_align"><a href="-Library-Ruby-Gems-1_8-gems-rcov-0_9_6-lib-rcov-differential_analyzer_rb.html">/Library/Ruby/Gems/1.8/gems/rcov-0.9.6/lib/rcov/differential_analyzer.rb</a></td>
+              <td class='right_align'><tt>116</tt></td>
+              <td class='right_align'><tt>82</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>11.21%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:11px"></div>
+            <div class="uncovered" style="width:89px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>10.98%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:11px"></div>
+            <div class="uncovered" style="width:89px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 bin even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-bin-spec.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/bin/spec</a></td>
+              <td class='right_align'><tt>5</tt></td>
+              <td class='right_align'><tt>4</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec.rb</a></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec adapters mock_frameworks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-adapters-mock_frameworks-rspec_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/adapters/mock_frameworks/rspec.rb</a></td>
+              <td class='right_align'><tt>21</tt></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-autorun_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/autorun.rb</a></td>
+              <td class='right_align'><tt>3</tt></td>
+              <td class='right_align'><tt>2</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-deprecation_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/deprecation.rb</a></td>
+              <td class='right_align'><tt>40</tt></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>30.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:30px"></div>
+            <div class="uncovered" style="width:70px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>29.03%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:29px"></div>
+            <div class="uncovered" style="width:71px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-dsl_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/dsl.rb</a></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec dsl even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-dsl-main_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/dsl/main.rb</a></td>
+              <td class='right_align'><tt>92</tt></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.61%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:83px"></div>
+            <div class="uncovered" style="width:17px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>48.39%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:48px"></div>
+            <div class="uncovered" style="width:52px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example.rb</a></td>
+              <td class='right_align'><tt>164</tt></td>
+              <td class='right_align'><tt>21</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-args_and_options_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/args_and_options.rb</a></td>
+              <td class='right_align'><tt>27</tt></td>
+              <td class='right_align'><tt>24</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-before_and_after_hooks_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/before_and_after_hooks.rb</a></td>
+              <td class='right_align'><tt>93</tt></td>
+              <td class='right_align'><tt>61</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>69.89%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:70px"></div>
+            <div class="uncovered" style="width:30px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>55.74%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:56px"></div>
+            <div class="uncovered" style="width:44px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-errors_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/errors.rb</a></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class='right_align'><tt>22</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>56.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:56px"></div>
+            <div class="uncovered" style="width:44px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>50.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:50px"></div>
+            <div class="uncovered" style="width:50px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_group_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_group.rb</a></td>
+              <td class='right_align'><tt>10</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_group_factory_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_group_factory.rb</a></td>
+              <td class='right_align'><tt>82</tt></td>
+              <td class='right_align'><tt>55</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.24%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:90px"></div>
+            <div class="uncovered" style="width:10px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>85.45%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:85px"></div>
+            <div class="uncovered" style="width:15px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_group_hierarchy_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_group_hierarchy.rb</a></td>
+              <td class='right_align'><tt>53</tt></td>
+              <td class='right_align'><tt>43</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.45%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:92px"></div>
+            <div class="uncovered" style="width:8px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>90.70%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:91px"></div>
+            <div class="uncovered" style="width:9px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_group_methods_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_group_methods.rb</a></td>
+              <td class='right_align'><tt>282</tt></td>
+              <td class='right_align'><tt>217</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>70.57%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:71px"></div>
+            <div class="uncovered" style="width:29px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>62.21%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:62px"></div>
+            <div class="uncovered" style="width:38px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_group_proxy_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_group_proxy.rb</a></td>
+              <td class='right_align'><tt>61</tt></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.41%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>58.33%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:58px"></div>
+            <div class="uncovered" style="width:42px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_matcher_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_matcher.rb</a></td>
+              <td class='right_align'><tt>43</tt></td>
+              <td class='right_align'><tt>35</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>53.49%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:53px"></div>
+            <div class="uncovered" style="width:47px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>42.86%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:43px"></div>
+            <div class="uncovered" style="width:57px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_methods_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_methods.rb</a></td>
+              <td class='right_align'><tt>148</tt></td>
+              <td class='right_align'><tt>108</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>79.05%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:79px"></div>
+            <div class="uncovered" style="width:21px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>72.22%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:72px"></div>
+            <div class="uncovered" style="width:28px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-example_proxy_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/example_proxy.rb</a></td>
+              <td class='right_align'><tt>41</tt></td>
+              <td class='right_align'><tt>23</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>80.49%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:80px"></div>
+            <div class="uncovered" style="width:20px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>65.22%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:65px"></div>
+            <div class="uncovered" style="width:35px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-module_reopening_fix_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/module_reopening_fix.rb</a></td>
+              <td class='right_align'><tt>43</tt></td>
+              <td class='right_align'><tt>18</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-pending_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/pending.rb</a></td>
+              <td class='right_align'><tt>18</tt></td>
+              <td class='right_align'><tt>18</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>22.22%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:22px"></div>
+            <div class="uncovered" style="width:78px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>22.22%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:22px"></div>
+            <div class="uncovered" style="width:78px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-predicate_matchers_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/predicate_matchers.rb</a></td>
+              <td class='right_align'><tt>46</tt></td>
+              <td class='right_align'><tt>16</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.30%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:91px"></div>
+            <div class="uncovered" style="width:9px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-shared_example_group_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/shared_example_group.rb</a></td>
+              <td class='right_align'><tt>59</tt></td>
+              <td class='right_align'><tt>48</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>47.46%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:47px"></div>
+            <div class="uncovered" style="width:53px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>35.42%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:35px"></div>
+            <div class="uncovered" style="width:65px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec example odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-example-subject_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/example/subject.rb</a></td>
+              <td class='right_align'><tt>108</tt></td>
+              <td class='right_align'><tt>43</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>37.21%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:37px"></div>
+            <div class="uncovered" style="width:63px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations.rb</a></td>
+              <td class='right_align'><tt>35</tt></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec expectations odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations-errors_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations/errors.rb</a></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec expectations even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations-extensions_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations/extensions.rb</a></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec expectations extensions odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations-extensions-kernel_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations/extensions/kernel.rb</a></td>
+              <td class='right_align'><tt>52</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>94.23%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:94px"></div>
+            <div class="uncovered" style="width:6px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>62.50%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:63px"></div>
+            <div class="uncovered" style="width:37px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec expectations even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations-fail_with_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations/fail_with.rb</a></td>
+              <td class='right_align'><tt>45</tt></td>
+              <td class='right_align'><tt>37</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>24.44%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:24px"></div>
+            <div class="uncovered" style="width:76px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>13.51%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:14px"></div>
+            <div class="uncovered" style="width:86px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec expectations odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-expectations-handler_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/expectations/handler.rb</a></td>
+              <td class='right_align'><tt>50</tt></td>
+              <td class='right_align'><tt>41</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>32.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:32px"></div>
+            <div class="uncovered" style="width:68px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>29.27%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:29px"></div>
+            <div class="uncovered" style="width:71px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers.rb</a></td>
+              <td class='right_align'><tt>195</tt></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-be_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/be.rb</a></td>
+              <td class='right_align'><tt>210</tt></td>
+              <td class='right_align'><tt>142</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>60.48%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:60px"></div>
+            <div class="uncovered" style="width:40px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>46.48%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:46px"></div>
+            <div class="uncovered" style="width:54px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-be_close_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/be_close.rb</a></td>
+              <td class='right_align'><tt>32</tt></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>37.50%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:38px"></div>
+            <div class="uncovered" style="width:62px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>15.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:15px"></div>
+            <div class="uncovered" style="width:85px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-be_instance_of_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/be_instance_of.rb</a></td>
+              <td class='right_align'><tt>26</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-be_kind_of_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/be_kind_of.rb</a></td>
+              <td class='right_align'><tt>26</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-change_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/change.rb</a></td>
+              <td class='right_align'><tt>151</tt></td>
+              <td class='right_align'><tt>79</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.12%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:82px"></div>
+            <div class="uncovered" style="width:18px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>65.82%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:66px"></div>
+            <div class="uncovered" style="width:34px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-compatibility_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/compatibility.rb</a></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-dsl_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/dsl.rb</a></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class='right_align'><tt>16</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>70.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:70px"></div>
+            <div class="uncovered" style="width:30px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>62.50%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:63px"></div>
+            <div class="uncovered" style="width:37px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-eql_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/eql.rb</a></td>
+              <td class='right_align'><tt>42</tt></td>
+              <td class='right_align'><tt>24</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>35.71%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:36px"></div>
+            <div class="uncovered" style="width:64px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>12.50%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:13px"></div>
+            <div class="uncovered" style="width:87px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-equal_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/equal.rb</a></td>
+              <td class='right_align'><tt>53</tt></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>54.72%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:55px"></div>
+            <div class="uncovered" style="width:45px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>41.94%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:42px"></div>
+            <div class="uncovered" style="width:58px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-errors_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/errors.rb</a></td>
+              <td class='right_align'><tt>5</tt></td>
+              <td class='right_align'><tt>5</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-exist_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/exist.rb</a></td>
+              <td class='right_align'><tt>16</tt></td>
+              <td class='right_align'><tt>11</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>50.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:50px"></div>
+            <div class="uncovered" style="width:50px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.27%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:27px"></div>
+            <div class="uncovered" style="width:73px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers extensions even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-extensions-instance_exec_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/extensions/instance_exec.rb</a></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class='right_align'><tt>24</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-generated_descriptions_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/generated_descriptions.rb</a></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class='right_align'><tt>27</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>38.89%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:39px"></div>
+            <div class="uncovered" style="width:61px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>33.33%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:33px"></div>
+            <div class="uncovered" style="width:67px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-has_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/has.rb</a></td>
+              <td class='right_align'><tt>35</tt></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>51.43%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:51px"></div>
+            <div class="uncovered" style="width:49px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>40.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:40px"></div>
+            <div class="uncovered" style="width:60px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-have_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/have.rb</a></td>
+              <td class='right_align'><tt>151</tt></td>
+              <td class='right_align'><tt>91</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>51.66%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:52px"></div>
+            <div class="uncovered" style="width:48px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>19.78%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:20px"></div>
+            <div class="uncovered" style="width:80px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-include_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/include.rb</a></td>
+              <td class='right_align'><tt>44</tt></td>
+              <td class='right_align'><tt>27</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>43.18%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:43px"></div>
+            <div class="uncovered" style="width:57px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>11.11%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:11px"></div>
+            <div class="uncovered" style="width:89px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-match_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/match.rb</a></td>
+              <td class='right_align'><tt>21</tt></td>
+              <td class='right_align'><tt>11</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.90%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:62px"></div>
+            <div class="uncovered" style="width:38px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.27%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:27px"></div>
+            <div class="uncovered" style="width:73px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-match_array_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/match_array.rb</a></td>
+              <td class='right_align'><tt>71</tt></td>
+              <td class='right_align'><tt>43</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>57.75%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:58px"></div>
+            <div class="uncovered" style="width:42px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>34.88%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:35px"></div>
+            <div class="uncovered" style="width:65px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-matcher_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/matcher.rb</a></td>
+              <td class='right_align'><tt>87</tt></td>
+              <td class='right_align'><tt>62</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>81.61%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:82px"></div>
+            <div class="uncovered" style="width:18px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.81%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:76px"></div>
+            <div class="uncovered" style="width:24px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-method_missing_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/method_missing.rb</a></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-operator_matcher_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/operator_matcher.rb</a></td>
+              <td class='right_align'><tt>78</tt></td>
+              <td class='right_align'><tt>62</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>78.21%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:78px"></div>
+            <div class="uncovered" style="width:22px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.81%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:76px"></div>
+            <div class="uncovered" style="width:24px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-pretty_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/pretty.rb</a></td>
+              <td class='right_align'><tt>37</tt></td>
+              <td class='right_align'><tt>35</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>21.62%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:22px"></div>
+            <div class="uncovered" style="width:78px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>17.14%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:17px"></div>
+            <div class="uncovered" style="width:83px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-raise_error_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/raise_error.rb</a></td>
+              <td class='right_align'><tt>129</tt></td>
+              <td class='right_align'><tt>83</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>46.51%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:47px"></div>
+            <div class="uncovered" style="width:53px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>21.69%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:22px"></div>
+            <div class="uncovered" style="width:78px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-respond_to_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/respond_to.rb</a></td>
+              <td class='right_align'><tt>71</tt></td>
+              <td class='right_align'><tt>49</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>52.11%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:52px"></div>
+            <div class="uncovered" style="width:48px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>32.65%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:33px"></div>
+            <div class="uncovered" style="width:67px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-satisfy_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/satisfy.rb</a></td>
+              <td class='right_align'><tt>47</tt></td>
+              <td class='right_align'><tt>23</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>68.09%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:68px"></div>
+            <div class="uncovered" style="width:32px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>34.78%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:35px"></div>
+            <div class="uncovered" style="width:65px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-simple_matcher_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/simple_matcher.rb</a></td>
+              <td class='right_align'><tt>133</tt></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>81.20%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:81px"></div>
+            <div class="uncovered" style="width:19px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>30.56%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:31px"></div>
+            <div class="uncovered" style="width:69px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-throw_symbol_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/throw_symbol.rb</a></td>
+              <td class='right_align'><tt>104</tt></td>
+              <td class='right_align'><tt>66</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>43.27%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:43px"></div>
+            <div class="uncovered" style="width:57px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>18.18%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:18px"></div>
+            <div class="uncovered" style="width:82px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec matchers even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-matchers-wrap_expectation_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/matchers/wrap_expectation.rb</a></td>
+              <td class='right_align'><tt>55</tt></td>
+              <td class='right_align'><tt>13</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>81.82%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:82px"></div>
+            <div class="uncovered" style="width:18px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>23.08%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:23px"></div>
+            <div class="uncovered" style="width:77px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-argument_expectation_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/argument_expectation.rb</a></td>
+              <td class='right_align'><tt>51</tt></td>
+              <td class='right_align'><tt>40</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>37.25%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:37px"></div>
+            <div class="uncovered" style="width:63px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.50%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:28px"></div>
+            <div class="uncovered" style="width:72px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-argument_matchers_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/argument_matchers.rb</a></td>
+              <td class='right_align'><tt>237</tt></td>
+              <td class='right_align'><tt>149</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>60.34%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:60px"></div>
+            <div class="uncovered" style="width:40px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>36.91%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:37px"></div>
+            <div class="uncovered" style="width:63px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-error_generator_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/error_generator.rb</a></td>
+              <td class='right_align'><tt>92</tt></td>
+              <td class='right_align'><tt>74</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>41.30%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:41px"></div>
+            <div class="uncovered" style="width:59px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>28.38%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:28px"></div>
+            <div class="uncovered" style="width:72px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-errors_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/errors.rb</a></td>
+              <td class='right_align'><tt>10</tt></td>
+              <td class='right_align'><tt>8</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-example_methods_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/example_methods.rb</a></td>
+              <td class='right_align'><tt>69</tt></td>
+              <td class='right_align'><tt>32</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>63.77%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:64px"></div>
+            <div class="uncovered" style="width:36px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>31.25%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:31px"></div>
+            <div class="uncovered" style="width:69px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-extensions_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/extensions.rb</a></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class='right_align'><tt>1</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks extensions odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-extensions-object_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/extensions/object.rb</a></td>
+              <td class='right_align'><tt>3</tt></td>
+              <td class='right_align'><tt>3</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-framework_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/framework.rb</a></td>
+              <td class='right_align'><tt>15</tt></td>
+              <td class='right_align'><tt>11</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-message_expectation_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/message_expectation.rb</a></td>
+              <td class='right_align'><tt>329</tt></td>
+              <td class='right_align'><tt>261</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>33.74%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:34px"></div>
+            <div class="uncovered" style="width:66px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>21.07%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:21px"></div>
+            <div class="uncovered" style="width:79px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-methods_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/methods.rb</a></td>
+              <td class='right_align'><tt>89</tt></td>
+              <td class='right_align'><tt>61</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>50.56%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:51px"></div>
+            <div class="uncovered" style="width:49px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>27.87%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:28px"></div>
+            <div class="uncovered" style="width:72px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-mock_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/mock.rb</a></td>
+              <td class='right_align'><tt>71</tt></td>
+              <td class='right_align'><tt>54</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>42.25%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:42px"></div>
+            <div class="uncovered" style="width:58px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>24.07%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:24px"></div>
+            <div class="uncovered" style="width:76px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-order_group_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/order_group.rb</a></td>
+              <td class='right_align'><tt>29</tt></td>
+              <td class='right_align'><tt>24</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>51.72%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:52px"></div>
+            <div class="uncovered" style="width:48px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>45.83%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:46px"></div>
+            <div class="uncovered" style="width:54px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-proxy_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/proxy.rb</a></td>
+              <td class='right_align'><tt>245</tt></td>
+              <td class='right_align'><tt>202</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>31.84%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:32px"></div>
+            <div class="uncovered" style="width:68px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>20.79%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:21px"></div>
+            <div class="uncovered" style="width:79px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec mocks even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-mocks-space_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/mocks/space.rb</a></td>
+              <td class='right_align'><tt>28</tt></td>
+              <td class='right_align'><tt>24</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>78.57%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:79px"></div>
+            <div class="uncovered" style="width:21px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-ruby_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/ruby.rb</a></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner.rb</a></td>
+              <td class='right_align'><tt>66</tt></td>
+              <td class='right_align'><tt>45</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>95.45%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:95px"></div>
+            <div class="uncovered" style="width:5px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>93.33%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:93px"></div>
+            <div class="uncovered" style="width:7px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-backtrace_tweaker_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/backtrace_tweaker.rb</a></td>
+              <td class='right_align'><tt>77</tt></td>
+              <td class='right_align'><tt>65</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.53%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:68px"></div>
+            <div class="uncovered" style="width:32px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.54%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:62px"></div>
+            <div class="uncovered" style="width:38px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-class_and_arguments_parser_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/class_and_arguments_parser.rb</a></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>28.57%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:29px"></div>
+            <div class="uncovered" style="width:71px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>28.57%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:29px"></div>
+            <div class="uncovered" style="width:71px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-command_line_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/command_line.rb</a></td>
+              <td class='right_align'><tt>15</tt></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-configuration_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/configuration.rb</a></td>
+              <td class='right_align'><tt>194</tt></td>
+              <td class='right_align'><tt>76</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>77.32%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:77px"></div>
+            <div class="uncovered" style="width:23px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>42.11%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:42px"></div>
+            <div class="uncovered" style="width:58px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-drb_command_line_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/drb_command_line.rb</a></td>
+              <td class='right_align'><tt>26</tt></td>
+              <td class='right_align'><tt>22</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>34.62%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:35px"></div>
+            <div class="uncovered" style="width:65px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>22.73%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:23px"></div>
+            <div class="uncovered" style="width:77px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-example_group_runner_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/example_group_runner.rb</a></td>
+              <td class='right_align'><tt>59</tt></td>
+              <td class='right_align'><tt>46</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner extensions odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-extensions-kernel_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/extensions/kernel.rb</a></td>
+              <td class='right_align'><tt>9</tt></td>
+              <td class='right_align'><tt>7</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>44.44%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:44px"></div>
+            <div class="uncovered" style="width:56px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>42.86%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:43px"></div>
+            <div class="uncovered" style="width:57px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner formatter even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-formatter-base_formatter_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/formatter/base_formatter.rb</a></td>
+              <td class='right_align'><tt>139</tt></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>97.84%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:98px"></div>
+            <div class="uncovered" style="width:2px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>91.67%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:92px"></div>
+            <div class="uncovered" style="width:8px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner formatter odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-formatter-base_text_formatter_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/formatter/base_text_formatter.rb</a></td>
+              <td class='right_align'><tt>142</tt></td>
+              <td class='right_align'><tt>113</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>69.72%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:70px"></div>
+            <div class="uncovered" style="width:30px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.95%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:62px"></div>
+            <div class="uncovered" style="width:38px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner formatter even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-formatter-no_op_method_missing_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/formatter/no_op_method_missing.rb</a></td>
+              <td class='right_align'><tt>21</tt></td>
+              <td class='right_align'><tt>18</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>71.43%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:71px"></div>
+            <div class="uncovered" style="width:29px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>66.67%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:67px"></div>
+            <div class="uncovered" style="width:33px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner formatter odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-formatter-progress_bar_formatter_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/formatter/progress_bar_formatter.rb</a></td>
+              <td class='right_align'><tt>33</tt></td>
+              <td class='right_align'><tt>28</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>78.79%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:79px"></div>
+            <div class="uncovered" style="width:21px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>75.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:75px"></div>
+            <div class="uncovered" style="width:25px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 20 30 40 50 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-line_number_query_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/line_number_query.rb</a></td>
+              <td class='right_align'><tt>78</tt></td>
+              <td class='right_align'><tt>67</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>29.49%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:29px"></div>
+            <div class="uncovered" style="width:71px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>19.40%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:19px"></div>
+            <div class="uncovered" style="width:81px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-option_parser_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/option_parser.rb</a></td>
+              <td class='right_align'><tt>223</tt></td>
+              <td class='right_align'><tt>197</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>78.92%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:79px"></div>
+            <div class="uncovered" style="width:21px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>76.14%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:76px"></div>
+            <div class="uncovered" style="width:24px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-options_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/options.rb</a></td>
+              <td class='right_align'><tt>400</tt></td>
+              <td class='right_align'><tt>341</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>67.25%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:67px"></div>
+            <div class="uncovered" style="width:33px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>61.58%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:62px"></div>
+            <div class="uncovered" style="width:38px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 60 70 80 90 100  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec runner odd">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-runner-reporter_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/runner/reporter.rb</a></td>
+              <td class='right_align'><tt>171</tt></td>
+              <td class='right_align'><tt>131</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>68.42%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:68px"></div>
+            <div class="uncovered" style="width:32px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>59.54%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:60px"></div>
+            <div class="uncovered" style="width:40px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110  Users talonas .gem ruby 1.8 gems rspec-1.2.9 lib spec even">
+              <td class="left_align"><a href="-Users-talonas-_gem-ruby-1_8-gems-rspec-1_2_9-lib-spec-version_rb.html">/Users/talonas/.gem/ruby/1.8/gems/rspec-1.2.9/lib/spec/version.rb</a></td>
+              <td class='right_align'><tt>14</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes odd">
+              <td class="left_align"><a href="classes-album_rb.html">classes/album.rb</a></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes even">
+              <td class="left_align"><a href="classes-artist_rb.html">classes/artist.rb</a></td>
+              <td class='right_align'><tt>23</tt></td>
+              <td class='right_align'><tt>12</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes odd">
+              <td class="left_align"><a href="classes-mainmethod_rb.html">classes/mainmethod.rb</a></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class='right_align'><tt>29</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes even">
+              <td class="left_align"><a href="classes-store_rb.html">classes/store.rb</a></td>
+              <td class='right_align'><tt>57</tt></td>
+              <td class='right_align'><tt>49</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes odd">
+              <td class="left_align"><a href="classes-user_rb.html">classes/user.rb</a></td>
+              <td class='right_align'><tt>61</tt></td>
+              <td class='right_align'><tt>54</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 classes even">
+              <td class="left_align"><a href="classes-userhistory_rb.html">classes/userhistory.rb</a></td>
+              <td class='right_align'><tt>20</tt></td>
+              <td class='right_align'><tt>15</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 90 100 modules odd">
+              <td class="left_align"><a href="modules-activerecord_rb.html">modules/activerecord.rb</a></td>
+              <td class='right_align'><tt>122</tt></td>
+              <td class='right_align'><tt>90</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>82.79%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:83px"></div>
+            <div class="uncovered" style="width:17px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>85.56%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:86px"></div>
+            <div class="uncovered" style="width:14px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 modules even">
+              <td class="left_align"><a href="modules-validation_rb.html">modules/validation.rb</a></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class='right_align'><tt>22</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec odd">
+              <td class="left_align"><a href="spec-activerecord_spec_rb.html">spec/activerecord_spec.rb</a></td>
+              <td class='right_align'><tt>59</tt></td>
+              <td class='right_align'><tt>46</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec even">
+              <td class="left_align"><a href="spec-album_spec_rb.html">spec/album_spec.rb</a></td>
+              <td class='right_align'><tt>31</tt></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec odd">
+              <td class="left_align"><a href="spec-artist_spec_rb.html">spec/artist_spec.rb</a></td>
+              <td class='right_align'><tt>35</tt></td>
+              <td class='right_align'><tt>28</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec even">
+              <td class="left_align"><a href="spec-store_spec_rb.html">spec/store_spec.rb</a></td>
+              <td class='right_align'><tt>119</tt></td>
+              <td class='right_align'><tt>97</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec odd">
+              <td class="left_align"><a href="spec-user_spec_rb.html">spec/user_spec.rb</a></td>
+              <td class='right_align'><tt>69</tt></td>
+              <td class='right_align'><tt>57</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec even">
+              <td class="left_align"><a href="spec-userhistory_spec_rb.html">spec/userhistory_spec.rb</a></td>
+              <td class='right_align'><tt>44</tt></td>
+              <td class='right_align'><tt>36</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+            <tr class="all_files all_coverage 110 spec odd">
+              <td class="left_align"><a href="spec-validation_spec_rb.html">spec/validation_spec.rb</a></td>
+              <td class='right_align'><tt>29</tt></td>
+              <td class='right_align'><tt>25</tt></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+              <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
+          <div class="percent_graph">
+            <div class="covered" style="width:100px"></div>
+            <div class="uncovered" style="width:0px"></div>
+          </div></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    <p>Generated on Mon Nov 16 19:41:39 +0200 2009 with <a href="http://github.com/relevance/rcov">rcov 0.9.6</a></p>
+
+    <script type="text/javascript">
+      $(document).ready(function(){$("#report_table").tablesorter({widgets: ['zebra'], textExtraction: 'complex'});});
+      $('.filter').change(function(){
+        ff = $('#file_filter').val();
+        cf = $('#coverage_filter').val();
+        $('table#report_table tbody tr').each(function(i){ 
+          if ((this.className.split(" ").indexOf(ff) > -1) && (this.className.split(" ").indexOf(cf) > -1)) {
+            this.style.display = "";
+          } else {
+            this.style.display = "none";
+          };
+          restripe();
+        })
+      })
+    </script>
+
+  </body>
+</html>
