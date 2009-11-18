@@ -1,6 +1,0 @@
-I have used these matchers:
-  1. should be
-  2. should be_instance_of
-  3. should change
-  4. should be_false
-  5. should equal
