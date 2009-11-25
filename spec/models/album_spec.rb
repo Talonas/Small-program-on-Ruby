@@ -1,9 +1,5 @@
-require 'rubygems'
-require 'spec'
-require 'classes/album'
-require 'classes/store'
-require 'modules/activerecord'
- 
+require File.join( File.dirname(__FILE__), "..", "spec_helper" )
+
 describe Album do
   
   it "should create new empty album" do
