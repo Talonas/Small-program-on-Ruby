@@ -1,26 +1,26 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 
 describe User do
-=begin  
+ 
   it "should create empty user" do
-    User.new.should be_instance_of(User)
+    User.new.should be_kind_of(User)
   end
   
-  it "should create user with parameters" do
-    User.new(1, "vardas", "pavarde", 99, "vyr", "adresas", "pastas").should be_instance_of(User)
-  end
-  
-  it "should have id, name, surname, age, gender, adress and email" do
-    user = User.new(1, "vardas", "pavarde", 99, "vyr", "adresas", "pastas")
-    user.id.should == 1
-    user.name.should == "vardas"
-    user.surname.should == "pavarde"
-    user.age.should == 99
+  it "should have name, surname, age, gender, adress and email" do
+    user = User.new(:name => "Jonas",
+                    :surname => "Jonaitis",
+                    :age => 45,
+                    :gender => "vyr",
+                    :adress => "Zalgirio g. 34, Kaunas",
+                    :email => "jonas@gmail.com")
+    user.name.should == "Jonas"
+    user.surname.should == "Jonaitis"
+    user.age.should == 45
     user.gender.should == "vyr"
-    user.adress.should == "adresas"
-    user.email.should == "pastas"
+    user.adress.should == "Zalgirio g. 34, Kaunas"
+    user.email.should == "jonas@gmail.com"
   end
-  
+=begin   
   it "should let rewrite id, name, surname, age, gender, adress and email" do
     user = User.new
     user.id = 12
