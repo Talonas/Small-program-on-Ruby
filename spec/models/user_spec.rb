@@ -1,11 +1,7 @@
-require 'rubygems'
-require 'spec'
-require 'classes/user'
-require 'classes/userhistory'
-require 'modules/activerecord'
- 
+require File.join( File.dirname(__FILE__), "..", "spec_helper" )
+
 describe User do
-  
+=begin  
   it "should create empty user" do
     User.new.should be_instance_of(User)
   end
@@ -65,5 +61,5 @@ describe User do
     user = ActiveRecord.find("User", 1)
     user.update("", "", "age", "", "", "").should be_false
   end
-  
+=end  
 end

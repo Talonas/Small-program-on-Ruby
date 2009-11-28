@@ -1,24 +1,20 @@
-require 'rubygems'
-require 'spec'
-require 'classes/artist'
-require 'classes/album'
+require File.join( File.dirname(__FILE__), "..", "spec_helper" )
  
 describe Artist do
   
   it "should create a new empty artist" do
-    Artist.new.should be_instance_of(Artist)
+    Artist.new.should be_instance_of(ActiveRecord::Base)
   end
   
-  it "should create a new artist with id and name" do
-    Artist.new(1, "artist").should be_instance_of(Artist)
+  it "should create a new artist with name" do
+    Artist.new(:name => "Led Zeppelin").should be_instance_of(ActiveRecord::Base)
   end
   
-  it "should have id and name" do
-    artist = Artist.new(1, "artist")
-    artist.id.should == 1
-    artist.name.should == "artist"
+  it "should have name" do
+    artist = Artist.new(:name => "Led Zeppelin")
+    artist.name.should == "Led Zeppelin"
   end
-  
+=begin  
   it "should allow rewrite id and name" do
     artist = Artist.new
     artist.id = 10
@@ -31,5 +27,5 @@ describe Artist do
       album.should be_instance_of(Album)
     end
   end
-  
+=end
 end

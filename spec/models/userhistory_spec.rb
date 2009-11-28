@@ -1,10 +1,5 @@
-require 'rubygems'
-require 'spec'
-require 'classes/userhistory'
-require 'classes/album'
-require 'classes/artist'
-require 'modules/activerecord'
- 
+require File.join( File.dirname(__FILE__), "..", "spec_helper" )
+
 Spec::Matchers.define :belong do |expected|
   match do |actual|
     actual.should be_instance_of(expected)
@@ -12,7 +7,7 @@ Spec::Matchers.define :belong do |expected|
 end
  
 describe UserHistory do
-  
+=begin  
   it "should create empty userHistory class" do
     UserHistory.new.should belong(UserHistory)
   end
@@ -40,5 +35,5 @@ describe UserHistory do
     history.info["album"].should belong(Album)
     history.info["artist"].should belong(Artist)
   end
-  
+=end  
 end
