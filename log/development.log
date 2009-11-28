@@ -260,3 +260,189 @@ Migrating to AddPriceToUserHistory (20091128114317)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stores")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("user_history")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Album (20091128110858)
+Migrating to CreateTableAlbum (20091128110909)
+Migrating to AddArtistIdToAlbum (20091128110924)
+Migrating to AddNameToAlbum (20091128112906)
+Migrating to AddYearToAlbum (20091128112917)
+Migrating to AddGenreToAlbum (20091128112925)
+Migrating to Artist (20091128113921)
+Migrating to CreateTableArtists (20091128113930)
+Migrating to AddNameToArtists (20091128113950)
+Migrating to Store (20091128114004)
+Migrating to CreateTableStore (20091128114024)
+Migrating to AddAlbumIdToStore (20091128114033)
+Migrating to AddAmountToStore (20091128114045)
+Migrating to AddPriceToStore (20091128114054)
+Migrating to AddSelfPriceToStore (20091128114102)
+Migrating to User (20091128114120)
+Migrating to CreateTableUsers (20091128114128)
+Migrating to AddNameToUsers (20091128114136)
+Migrating to AddSurnameToUsers (20091128114144)
+Migrating to AddAgeToUsers (20091128114152)
+Migrating to AddGenderToUsers (20091128114159)
+Migrating to AddAdressToUsers (20091128114207)
+Migrating to AddEmailToUsers (20091128114215)
+Migrating to UserHistory (20091128114228)
+Migrating to CreateTableUserHistory (20091128114240)
+Migrating to AddUserIdToUserHistory (20091128114257)
+Migrating to AddAlbumIdToUserHistory (20091128114307)
+Migrating to AddPriceToUserHistory (20091128114317)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("albums")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("artists")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stores")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("user_history")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Album (20091128110858)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128110858')[0m
+Migrating to CreateTableAlbum (20091128110909)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128110909')[0m
+Migrating to AddArtistIdToAlbum (20091128110924)
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "albums" ADD "artist_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128110924')[0m
+Migrating to AddNameToAlbum (20091128112906)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "albums" ADD "name" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128112906')[0m
+Migrating to AddYearToAlbum (20091128112917)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "albums" ADD "year" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128112917')[0m
+Migrating to AddGenreToAlbum (20091128112925)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "albums" ADD "genre" varchar(255)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128112925')[0m
+Migrating to Artist (20091128113921)
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128113921')[0m
+Migrating to CreateTableArtists (20091128113930)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128113930')[0m
+Migrating to AddNameToArtists (20091128113950)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "artists" ADD "name" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128113950')[0m
+Migrating to Store (20091128114004)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114004')[0m
+Migrating to CreateTableStore (20091128114024)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114024')[0m
+Migrating to AddAlbumIdToStore (20091128114033)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "stores" ADD "album_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114033')[0m
+Migrating to AddAmountToStore (20091128114045)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "stores" ADD "amount" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114045')[0m
+Migrating to AddPriceToStore (20091128114054)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "stores" ADD "price" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114054')[0m
+Migrating to AddSelfPriceToStore (20091128114102)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "stores" ADD "self_price" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114102')[0m
+Migrating to User (20091128114120)
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114120')[0m
+Migrating to CreateTableUsers (20091128114128)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114128')[0m
+Migrating to AddNameToUsers (20091128114136)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "name" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114136')[0m
+Migrating to AddSurnameToUsers (20091128114144)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "surname" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114144')[0m
+Migrating to AddAgeToUsers (20091128114152)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "age" integer[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114152')[0m
+Migrating to AddGenderToUsers (20091128114159)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "gender" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114159')[0m
+Migrating to AddAdressToUsers (20091128114207)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "users" ADD "adress" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114207')[0m
+Migrating to AddEmailToUsers (20091128114215)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091128114215')[0m
+Migrating to UserHistory (20091128114228)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114228')[0m
+Migrating to CreateTableUserHistory (20091128114240)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "user_histories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114240')[0m
+Migrating to AddUserIdToUserHistory (20091128114257)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: user_history: ALTER TABLE "user_history" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to Album (20091128110858)
+Migrating to CreateTableAlbum (20091128110909)
+Migrating to AddArtistIdToAlbum (20091128110924)
+Migrating to AddNameToAlbum (20091128112906)
+Migrating to AddYearToAlbum (20091128112917)
+Migrating to AddGenreToAlbum (20091128112925)
+Migrating to Artist (20091128113921)
+Migrating to CreateTableArtists (20091128113930)
+Migrating to AddNameToArtists (20091128113950)
+Migrating to Store (20091128114004)
+Migrating to CreateTableStore (20091128114024)
+Migrating to AddAlbumIdToStore (20091128114033)
+Migrating to AddAmountToStore (20091128114045)
+Migrating to AddPriceToStore (20091128114054)
+Migrating to AddSelfPriceToStore (20091128114102)
+Migrating to User (20091128114120)
+Migrating to CreateTableUsers (20091128114128)
+Migrating to AddNameToUsers (20091128114136)
+Migrating to AddSurnameToUsers (20091128114144)
+Migrating to AddAgeToUsers (20091128114152)
+Migrating to AddGenderToUsers (20091128114159)
+Migrating to AddAdressToUsers (20091128114207)
+Migrating to AddEmailToUsers (20091128114215)
+Migrating to UserHistory (20091128114228)
+Migrating to CreateTableUserHistory (20091128114240)
+Migrating to AddUserIdToUserHistory (20091128114257)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "user_histories" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114257')[0m
+Migrating to AddAlbumIdToUserHistory (20091128114307)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "user_histories" ADD "album_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114307')[0m
+Migrating to AddPriceToUserHistory (20091128114317)
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "user_histories" ADD "price" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091128114317')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("albums")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("artists")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stores")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("user_histories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m

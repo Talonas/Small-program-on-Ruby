@@ -3,11 +3,11 @@ require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 describe Artist do
   
   it "should create a new empty artist" do
-    Artist.new.should be_instance_of(ActiveRecord::Base)
+    Artist.new.should be_kind_of(ActiveRecord::Base)
   end
   
   it "should create a new artist with name" do
-    Artist.new(:name => "Led Zeppelin").should be_instance_of(ActiveRecord::Base)
+    Artist.new(:name => "Led Zeppelin").should be_kind_of(ActiveRecord::Base)
   end
   
   it "should have name" do

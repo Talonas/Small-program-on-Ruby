@@ -7,6 +7,18 @@ Spec::Matchers.define :belong do |expected|
 end
  
 describe UserHistory do
+
+  it "should create empty user history" do
+    UserHistory.new.should be_kind_of(UserHistory)
+  end
+
+  it "should create UserHistory object with user_id, album_id and price" do
+    UserHistory.new(:user_id => 1,
+                    :album_id => 1,
+                    :price => 45
+                    ).should be_kind_of(UserHistory)
+  end
+
 =begin  
   it "should create empty userHistory class" do
     UserHistory.new.should belong(UserHistory)

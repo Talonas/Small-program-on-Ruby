@@ -13,7 +13,7 @@ end
 describe Store do
   
   it "should create empty object" do
-    Store.new.should be_instance_of(ActiveRecord::Base)
+    Store.new.should be_kind_of(ActiveRecord::Base)
   end
   
   it "should create not empty object" do
@@ -21,7 +21,7 @@ describe Store do
               :amount => 10,
               :price => 23,
               :self_price => 17
-              ).should be_instance_of(ActiveRecord::Base)
+              ).should be_kind_of(ActiveRecord::Base)
   end
   
   it "should have album_id, amount, price and self_price" do
