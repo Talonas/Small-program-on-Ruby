@@ -1,7 +1,22 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 
 describe Album do
-  
+
+  it "should create new empty album" do
+    Album.new.should be_kind_of(ActiveRecord::Base)
+  end
+
+  it "should have artist_id, name, year and genre" do
+    album = Album.new(:artist_id => 1,
+                      :name => "House of the Holy",
+                      :year => 1973,
+                      :genre => "rock")
+    album.name.should == "House of the Holy"
+    album.year.should == 1973
+    album.genre.should == "rock"
+  end
+
+=begin  
   it "should create new empty album" do
     Album.new.should be_instance_of(Album)
   end
@@ -23,5 +38,5 @@ describe Album do
     album = Album.new(999, 1, "album_name", 2009, "jazz")
     album.sell(1).should be_false
   end
- 
+=end 
 end
