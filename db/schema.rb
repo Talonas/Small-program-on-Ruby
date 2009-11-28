@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20091128114317) do
     t.integer "self_price"
   end
 
-  create_table "user_history", :force => true do |t|
+  create_table "user_histories", :force => true do |t|
     t.integer "user_id"
     t.integer "album_id"
     t.integer "price"
