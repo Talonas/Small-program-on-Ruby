@@ -1,0 +1,4 @@
+album_id, amount, price, self_price
+1, 10, 80, 55
+2, 0, 75, 60
+3, 2, 30, 20

@@ -1,0 +1,4 @@
+id, artist_id, name, year, genre
+1, 1, Presence, 1976, rock
+2, 1, The Song Remains The Same, 1976, rock
+3, 2, Animals, 1975, prog-rock
