@@ -8,3 +8,13 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+require 'spec/rake/spectask'
+ 
+desc "Run all examples with RCov"
+Spec::Rake::SpecTask.new('examples_with_rcov') do |t|
+  t.spec_files = FileList['spec/models/*_spec.rb']
+  t.rcov = true
+  t.rcov_opts = ['--exclude', 'examples']
+end
+
