@@ -25,7 +25,7 @@ describe Store do
   end
   
   it "should have album_id, amount, price and self_price" do
-    store = Store.new(:album_id => 1,
+    store = Store.create(:album_id => 1,
                       :amount => 10,
                       :price => 23,
                       :self_price => 17)
@@ -34,72 +34,64 @@ describe Store do
     store.price.should == 23
     store.self_price.should == 17
   end
-=begin  
-  it "should rewrite attributes" do
-    store = Store.new(1, 2, 3, 4)
-    store.album_id = 10
-    store.amount = 34
-    store.price = 0
-    store.self_price = 9
-  end
-  
+
   it "should sell album" do
-    store = Store.new(1, 12, 20, 10)
+    store = Store.find(:first, :conditions => {:album_id => 1})
     lambda {
       store.sell
     }.should change(store, :amount).by(-1)
   end
-  
+
   it "should not allow to sell album if its amount is less than 1" do
-    store = Store.new(1, 0, 20, 10)
+    store = Store.find(:first, :conditions => {:amount => 0})
     store.sell.should success('no')
   end
   
-  it "should add add more albums to store" do
-    store = Store.new(1, 0, 20, 10)
+  it "should add more albums to store" do
+    store = Store.find(:first, :conditions => {:album_id => 3})
     lambda {
       store.add_amount 10
     }.should change(store, :amount).by(10)
   end
  
   it "should should not allow to add 0 album" do
-    store = Store.new(1, 0, 20, 20)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.add_amount(0).should success('no')
   end
  
   it "should not allow to add negative number of albums" do
-    store = Store.new(1, 0, 20, 20)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.add_amount(-1).should success('no')
   end
   
   it "should not allow to add more albums to the store if value of amount is not numeric" do
-    store = Store.new(1, 0, 20, 10)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.add_amount("amount").should success('no')
   end
   
   it "should change price of album" do
-    store = Store.new(1, 1, 0, 10)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     lambda {
       store.set_new_price 20
-    }.should change(store, :price).from(0).to(20)
+    }.should change(store, :price).from(30).to(20)
   end
  
   it "should not change price if new price is 0" do
-    store = Store.new(1, 1, 1, 10)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.set_new_price(0).should success('no')
   end
  
   it "should not change price if new price is negative" do
-    store = Store.new(1, 1, 1, 10)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.set_new_price(-1).should success('no')
   end
   
   it "should not change price of album if value is not numeric" do
-    store = Store.new(1, 1, 1, 10)
+    store = Store.find(:first, :conditions => {:album_id => 3})
     store.set_new_price("price").should success('no')
   end
   
- 
+=begin 
   it "should not add record to store if amount is not numeric" do
     store = Store.new(1, "string", 3, 4)
     store.before_save.should success('no')
@@ -119,5 +111,5 @@ describe Store do
     store = Store.new(1, 10, 20, 20)
     store.before_save.should success('yes')
   end
-=end 
+=end
 end

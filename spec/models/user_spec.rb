@@ -7,12 +7,14 @@ describe User do
   end
   
   it "should have name, surname, age, gender, adress and email" do
-    user = User.new(:name => "Jonas",
-                    :surname => "Jonaitis",
-                    :age => 45,
-                    :gender => "vyr",
-                    :adress => "Zalgirio g. 34, Kaunas",
-                    :email => "jonas@gmail.com")
+    user = User.new(
+      :name => "Jonas",
+      :surname => "Jonaitis",
+      :age => 45,
+      :gender => "vyr",
+      :adress => "Zalgirio g. 34, Kaunas",
+      :email => "jonas@gmail.com"
+    )
     user.name.should == "Jonas"
     user.surname.should == "Jonaitis"
     user.age.should == 45
@@ -20,7 +22,7 @@ describe User do
     user.adress.should == "Zalgirio g. 34, Kaunas"
     user.email.should == "jonas@gmail.com"
   end
-=begin   
+  
   it "should let rewrite id, name, surname, age, gender, adress and email" do
     user = User.new
     user.id = 12
@@ -31,7 +33,7 @@ describe User do
     user.adress = "Kaunas"
     user.email = "emailas"
   end
-  
+=begin 
   it "should update user's information" do
     user = ActiveRecord.find("User", 1)
     user.update("Paulius", "Pilkauskas", "22", "vyr", "Vilnius", "test").should be_true
