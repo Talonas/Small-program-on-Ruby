@@ -1,11 +1,5 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 
-Spec::Matchers.define :belong do |expected|
-  match do |actual|
-    actual.should be_instance_of(expected)
-  end
-end
- 
 describe UserHistory do
 
   it "should create empty user history" do
@@ -32,11 +26,12 @@ describe UserHistory do
   end
 
   it "should add new record to user's history" do
-    UserHistory.create(
+    user_history = UserHistory.create(
       :user_id => 1,
       :album_id => 1,
       :price => 45
-    ).save
+    )
+    user_history.save
   end
  
 end

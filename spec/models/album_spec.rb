@@ -11,6 +11,14 @@ class StoreTest < Test::Unit::TestCase
     assert_equal false, album.sell(1)
   end
 
+  def test_should_return_true_for_success_selling
+    album = stub("album")
+    album.stubs(:add_record_to_history).returns(true)
+    album.stubs(:sell).returns(true)
+    #album = Album.find(1)
+    assert_equal true, album.sell(1)
+  end
+
   def test_should_sell_album
     store = mock("store")
     album = Album.find(1)
@@ -52,6 +60,11 @@ describe Album do
   it "should not allow to sell album if it's amount is 0" do
     album = Album.find(2)
     album.sell(1).should be_false
+  end
+
+  it "should create new user history record if sell is correct" do
+    album = Album.find(1)
+    album.add_record_to_history(1).should be_true
   end
 
 end

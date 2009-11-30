@@ -22,7 +22,7 @@ describe Store do
     Store.new.should be_kind_of(ActiveRecord::Base)
   end
   
-  it "should create not empty object" do
+  it "should create object" do
     Store.new(
       :album_id => 1,
       :amount => 10,
@@ -100,7 +100,6 @@ describe Store do
     store.set_new_price("price").should success('no')
   end
   
-
   it "should not add record to store if amount is not numeric" do
     store = Store.create(
       :album_id => 1, 
