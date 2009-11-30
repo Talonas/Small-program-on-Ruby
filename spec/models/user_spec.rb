@@ -22,26 +22,6 @@ describe User do
     user.adress.should == "Zalgirio g. 34, Kaunas"
     user.email.should == "jonas@gmail.com"
   end
-=begin  
-  it "should let rewrite name, surname, age, gender, adress and email" do
-    user = User.create(
-      :name => "Jonas",
-      :surname => "Jonaitis",
-      :age => 45,
-      :gender => "vyr",
-      :adress => "Zalgirio g. 34, Kaunas",
-      :email => "jonas@gmail.com"
-    )
-    user.id = 12
-    user.name ="test"
-    user.surname = "teste"
-    user.age = 33
-    user.gender = "mot"
-    user.adress = "Kaunas"
-    user.email = "emailas"
-    user.update("Jonas", "Jonaitis", 12, "vyr", "Zalgirio g. 34, Kaunas", "emailas@ads.lt").should be_true
-  end
-=end
 
   it "should update user's information" do
     user = User.find(1)

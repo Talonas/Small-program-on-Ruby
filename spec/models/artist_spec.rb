@@ -1,5 +1,5 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
- 
+
 describe Artist do
   
   it "should create a new empty artist" do

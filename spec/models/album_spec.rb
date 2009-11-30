@@ -1,4 +1,25 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
+require 'test/unit'
+require 'mocha'
+
+class StoreTest < Test::Unit::TestCase
+
+  def test_should_return_false_for_failed_sell
+    store = stub("store")
+    store.stubs(:sell).returns(false)
+    album = Album.find(1)
+    assert_equal false, album.sell(1)
+  end
+
+  def test_should_sell_album
+    store = mock("store")
+    album = Album.find(1)
+    store.expects(:sell)
+    album.sell 1
+    store.sell
+  end
+
+end
 
 describe Album do
 

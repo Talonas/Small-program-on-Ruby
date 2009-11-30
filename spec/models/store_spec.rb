@@ -1,5 +1,11 @@
 require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 
+require 'test/unit'
+require 'mocha'
+
+class StoreTest < Test::Unit::TestCase
+end
+
 Spec::Matchers.define :success do |expected|
   match do |actual|
     if expected == 'yes'
