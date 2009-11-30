@@ -2,7 +2,12 @@ class User < ActiveRecord::Base
 
   has_many :user_histories
 
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  validates_length_of :name, :minimum => 1, :allow_nil => false
+  validates_length_of :surname, :minimum => 1, :allow_nil => false
+  validates_length_of :adress, :minimum => 1, :allow_nil => false
+  validates_numericality_of :age, :on => :update, :on => :save
+  validates_inclusion_of :gender, :in => %w( vyr mot )
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :update, :on => :save
 
   def how_much_money_spent
     money_spent = 0
@@ -10,7 +15,7 @@ class User < ActiveRecord::Base
     return money_spent
   end
 
-  def update (name, surname, age, gender, adress, email)
+  def update_information (name, surname, age, gender, adress, email)
     if !name.empty?
       self.name = name
     end
@@ -30,62 +35,7 @@ class User < ActiveRecord::Base
       self.email = email
     end
     
-    self.save
+    self.update_attributes(:age => self.age, :gender=> self.gender, :email => self.email)
   end
 
-=begin
-  attr_accessor :id, :name, :surname, :age, :gender, :adress, :email
-  
-  def initialize(id=nil, name=nil, surname=nil, age=nil, gender=nil, adress=nil, email=nil)
-    @id      = id
-    @name    = name
-    @surname = surname
-    @age     = age
-    @gender  = gender
-    @adress  = adress
-    @email   = email
-  end
-  
-  def how_mutch_money_spended
-    moneyend_spend = 0
-    histories = ActiveRecord.find_all("UserHistory", {"WHERE" => {"user_id" => @id}})
-    if histories
-      histories.each { |history| money_spend += Integer(history.price) }
-    end
-    return money_spend
-  end
- 
-  def before_save
-    if !Validation.not_empty(@name) || !Validation.not_empty(@surname) || !Validation.not_empty(@age) || !Validation.is_numeric(@age) || 
-       !Validation.not_empty(@gender) || !Validation.not_empty(@adress) || !Validation.not_empty(@email)
-      return false
-    end
-    true
-  end
-  
-  def update(name, surname, age, gender, adress, email)
-    if !name.empty?
-      @name = name
-    end
-    if !surname.empty?
-      @surname = surname
-    end
-    if !age.empty?
-      @age = age
-    end
-    if !gender.empty?
-      @gender = gender
-    end
-    if !adress.empty?
-      @adress = adress
-    end
-    if !email.empty?
-      @email = email
-    end
-    if !save
-      return false
-    end
-    true
-  end
-=end
 end
