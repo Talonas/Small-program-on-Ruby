@@ -9,43 +9,34 @@ end
 describe UserHistory do
 
   it "should create empty user history" do
-    UserHistory.new.should be_kind_of(UserHistory)
+    UserHistory.new.should be_kind_of(ActiveRecord::Base)
   end
 
-  it "should create UserHistory object with user_id, album_id and price" do
-    UserHistory.new(:user_id => 1,
-                    :album_id => 1,
-                    :price => 45
-                    ).should be_kind_of(UserHistory)
-  end
-
-=begin  
-  it "should create empty userHistory class" do
-    UserHistory.new.should belong(UserHistory)
-  end
-  
-  it "should create UserHistory object with user_id, album_id and price" do
-    UserHistory.new(1, 1, 200).should belong(UserHistory)
-  end
-  
   it "should have user_id, album_id and price" do
-    history = UserHistory.new(1, 2, 3)
+    history = UserHistory.create(
+      :user_id => 1,
+      :album_id => 1,
+      :price => 45
+    )
     history.user_id.should == 1
-    history.album_id.should == 2
-    history.price.should == 3
+    history.album_id.should == 1
+    history.price.should == 45
   end
-  
-  it "should add new record (album_id and price) to user's history" do
-    history = UserHistory.new
-    history.user_id = 1
-    history.album_id = 2
-    history.price = 3
+
+  it "should create UserHistory object with user_id, album_id and price" do
+    UserHistory.create(
+      :user_id => 1,
+      :album_id => 1,
+      :price => 45
+    ).should be_kind_of(ActiveRecord::Base)
   end
-  
-  it "should get artist and album information" do
-    history = ActiveRecord.find("UserHistory", {"WHERE" => {"user_id" => 1}})
-    history.info["album"].should belong(Album)
-    history.info["artist"].should belong(Artist)
+
+  it "should add new record to user's history" do
+    UserHistory.create(
+      :user_id => 1,
+      :album_id => 1,
+      :price => 45
+    ).save
   end
-=end  
+ 
 end

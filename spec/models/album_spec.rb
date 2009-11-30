@@ -7,20 +7,24 @@ describe Album do
   end
 
   it "should have artist_id, name, year and genre" do
-    album = Album.new(:artist_id => 1,
-                      :name => "House of the Holy",
-                      :year => 1973,
-                      :genre => "rock")
+    album = Album.new(
+      :artist_id => 1,
+      :name => "House of the Holy",
+      :year => 1973,
+      :genre => "rock"
+    )
     album.name.should == "House of the Holy"
     album.year.should == 1973
     album.genre.should == "rock"
   end
 
   it "should sell album for user" do
-    album = Album.new(:artist_id => 1,
-                      :name => "House of the Holy",
-                      :year => 1973,
-                      :genre => "rock")
+    album = Album.new(
+      :artist_id => 1,
+      :name => "House of the Holy",
+      :year => 1973,
+      :genre => "rock"
+    )
     album.sell 1
   end
 

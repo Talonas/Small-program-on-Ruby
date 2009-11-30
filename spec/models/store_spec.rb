@@ -17,18 +17,21 @@ describe Store do
   end
   
   it "should create not empty object" do
-    Store.new(:album_id => 1,
-              :amount => 10,
-              :price => 23,
-              :self_price => 17
-              ).should be_kind_of(ActiveRecord::Base)
+    Store.new(
+      :album_id => 1,
+      :amount => 10,
+      :price => 23,
+      :self_price => 17
+    ).should be_kind_of(ActiveRecord::Base)
   end
   
   it "should have album_id, amount, price and self_price" do
-    store = Store.create(:album_id => 1,
-                      :amount => 10,
-                      :price => 23,
-                      :self_price => 17)
+    store = Store.create(
+      :album_id => 1,
+      :amount => 10,
+      :price => 23,
+      :self_price => 17
+    )
     store.album_id.should == 1
     store.amount.should == 10
     store.price.should == 23
@@ -91,25 +94,50 @@ describe Store do
     store.set_new_price("price").should success('no')
   end
   
-=begin 
+
   it "should not add record to store if amount is not numeric" do
-    store = Store.new(1, "string", 3, 4)
-    store.before_save.should success('no')
+    store = Store.create(
+      :album_id => 1, 
+      :amount => "string", 
+      :price => 3, 
+      :self_price => 4
+    )
+    store.save.should success('no')
   end
  
   it "should not add record to store if price is not numeric" do
-    store = Store.new(1, 2, "string", 4)
-    store.before_save.should success('no')
+    store = Store.create(
+      :album_id => 1, 
+      :amount => 10, 
+      :price => "price", 
+      :self_price => 4
+    )    
+    store.save.should success('no')
   end
  
   it "should not add record to store is self price is not numeric" do
-    store = Store.new(1, 2, 3, "string")
-    store.before_save.should success('no')
+    store = Store.create(
+      :album_id => 1, 
+      :amount => 10, 
+      :price => 3, 
+      :self_price => "self price"
+    )    
+    store.save.should success('no')
   end
   
   it "should add new record to store if amount, price and self price are correct" do
-    store = Store.new(1, 10, 20, 20)
-    store.before_save.should success('yes')
+    store = Store.create(
+      :album_id => 1, 
+      :amount => 10, 
+      :price => 3, 
+      :self_price => 1
+    )    
+    store.save.should success('yes')
   end
-=end
+
+  it "should not add new record to store if values are empty" do
+    store = Store.create
+    store.save.should success('no')
+  end
+
 end

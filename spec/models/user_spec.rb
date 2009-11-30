@@ -3,11 +3,11 @@ require File.join( File.dirname(__FILE__), "..", "spec_helper" )
 describe User do
  
   it "should create empty user" do
-    User.new.should be_kind_of(User)
+    User.new.should be_kind_of(ActiveRecord::Base)
   end
   
   it "should have name, surname, age, gender, adress and email" do
-    user = User.new(
+    user = User.create(
       :name => "Jonas",
       :surname => "Jonaitis",
       :age => 45,
@@ -22,9 +22,16 @@ describe User do
     user.adress.should == "Zalgirio g. 34, Kaunas"
     user.email.should == "jonas@gmail.com"
   end
-  
-  it "should let rewrite id, name, surname, age, gender, adress and email" do
-    user = User.new
+=begin  
+  it "should let rewrite name, surname, age, gender, adress and email" do
+    user = User.create(
+      :name => "Jonas",
+      :surname => "Jonaitis",
+      :age => 45,
+      :gender => "vyr",
+      :adress => "Zalgirio g. 34, Kaunas",
+      :email => "jonas@gmail.com"
+    )
     user.id = 12
     user.name ="test"
     user.surname = "teste"
@@ -32,36 +39,47 @@ describe User do
     user.gender = "mot"
     user.adress = "Kaunas"
     user.email = "emailas"
+    user.update("Jonas", "Jonaitis", 12, "vyr", "Zalgirio g. 34, Kaunas", "emailas@ads.lt").should be_true
   end
-=begin 
+=end
+
   it "should update user's information" do
-    user = ActiveRecord.find("User", 1)
-    user.update("Paulius", "Pilkauskas", "22", "vyr", "Vilnius", "test").should be_true
+    user = User.find(1)
+    user.update_information("Paulius", "Pilkauskas", "22", "vyr", "Vilnius", "talonas@gmail.com").should be_true
   end
  
   it "should count how much money did user spend" do
-    user = ActiveRecord.find("User", 1)
-    user.how_mutch_money_spended.should be_kind_of(Fixnum)
+    user = User.find(1)
+    user.how_much_money_spent.should be_kind_of(Fixnum)
+  end
+
+  it "should show zero in user history how much money spend if user did not buy anything yet" do
+    user = User.create(
+      :name => "Jonas",
+      :surname => "Jonaitis",
+      :age => 45,
+      :gender => "vyr",
+      :adress => "Zalgirio g. 34, Kaunas",
+      :email => "jonas@gmail.com"
+    )
+    user.how_much_money_spent.should equal(0)
   end
   
-  it "should show zero in user history how much money spend if user did not buy anything yet" do
-    user = User.new(100, "userName", "LastName", 34, "vyr", "adress", "email")
-    user.how_mutch_money_spended.should equal(0)
-  end
- 
-  it "should not allow register new user if he didn't filled fields" do
-    user = User.new
-    user.before_save.should be_false
-  end
- 
-  it "should not allow register new user if age is noti numeric" do
-    user = User.new("Username", "Userlastname", "AGE", "gender", "adress", "email")
+  it "should not allow register new user if he didn't filled all fields" do
+    user = User.create
     user.save.should be_false
   end
  
-  it "should not allow update user's information if age is not a number" do
-    user = ActiveRecord.find("User", 1)
-    user.update("", "", "age", "", "", "").should be_false
-  end
-=end  
+  it "should not allow register new user if age is noti numeric" do
+    user = User.create(
+      :name => "Jonas",
+      :surname => "Jonaitis",
+      :age => "age",
+      :gender => "vyr",
+      :adress => "Zalgirio g. 34, Kaunas",
+      :email => "jonas@gmail.com"
+    )    
+    user.save.should be_false
+  end  
+
 end
